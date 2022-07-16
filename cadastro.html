@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/cadastro.css">
+    <title>VALIDAÇÃO DE FORMULARIOS</title>
+    
+</head>
+<body>
+    
+    <div class="logo">LOGOMARCA</div>
+    <div class="container">
+        <div class="containerInner">
+            <div class="header">
+                <h2>Criar uma conta</h2>
+                <p>Preencha corretamente os campos abaixo.</p>
+            </div>
+
+            <form action="" class="form" id="form">
+                
+                <div class="form-control" id="nameDIV">
+                    <label for="name">NOME</label>
+                    <Input type="text" class="name" id="name">
+                        <small id="erroName">Erro</small>
+                </div>
+
+                <div class="form-control" id="emailDIV">
+                    <label for="email">E-MAIL</label>
+                    <input type="text" class="email" id="email">
+                    <small id="erroEmail">Erro</small>
+                </div>
+
+                <div class="form-control" id="telephoneDIV">
+                    <label for="telephone">NUMERO DE TELEFONE</label>
+                    <input type="tel" class="telephone" id="telephone">
+                    <small id="erroTelephone">Erro</small>
+                </div>
+
+                <div class="form-control" id="passwordDIV">
+                    <label for="password">SENHA</label>
+                    <input type="password" class="password" id="password">
+                    <small id="erroPassword">Erro</small>
+                </div>
+
+                <div class="form-control" id="confirmPasswordDIV">
+                    <label for="confirmPassword">COMFIRMAR SENHA</label>
+                    <input type="password" class="confirmPassword" id="confirmPassword">
+                    <small id="erroConfirmPassword">Erro</small>
+                </div>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+    <script src="./cadastro.js"></script>
+</body>
+</html>

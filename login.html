@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./login.css">
+    <title>VALIDAÇÃO DE FORMULARIOS</title>
+</head>
+<body>
+    
+    <div class="logo">LOGOMARCA</div>
+    <div class="container">
+        <div class="left">
+            <div class="header">
+                <h2>Seja bem-vindo!</h2>
+                <p>Estamos muito animados em te ver por aqui.</p>
+            </div>
+
+            <form action="" class="form" id="form">
+                <div class="form-control" id="emailDIV">
+                    <label for="email">E-MAIL</label>
+                    <input type="text" class="email" id="email">
+                    <small class="erroEmail" id="erroEmail">Erro</small>
+                </div>
+
+                <div class="form-control" id="passwordDIV">
+                    <label for="password">SENHA</label>
+                    <input type="password" class="password" id="password">
+                    <small class="erroPassword" id="erroPassword">Erro</small>
+                </div>
+                
+                <span class="forgot"><a href="">Esqueceu sua senha?</a></span>
+
+                <button>Entrar</button>
+
+                <div class="singin">
+                    <p>Precisa de uma conta? <span><a href="">Registre-se</a></span></p>
+                </div>
+
+
+            </form>
+        </div>
+
+        <div class="right">
+            <img src="/img/imgQR.png" alt="">
+            <h2>Entrar com o Código QR</h2>
+            <p>Escaneie isto com o <b>app móvel</b> para fazer login imediatamente.</p>
+        </div>
+    </div>
+    <script src="./login.js"></script>
+</body>
+</html>
