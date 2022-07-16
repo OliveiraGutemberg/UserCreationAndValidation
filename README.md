@@ -8,7 +8,7 @@
 - [x] Register users
 - [x] Authenticate users
 - [x] Local storage
-- [] QR code login
+- [ ] QR code login
 
 <h1>
     <img alt="Readme" title="Readme" src="./img/cadastro.JPG">
