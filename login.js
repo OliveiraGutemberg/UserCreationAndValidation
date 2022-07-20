@@ -1,4 +1,9 @@
-let registration = JSON.parse (localStorage.getItem('Registration'))
+let registration = JSON.parse (localStorage.getItem('Registration')) || {
+    name: "",
+    email: "",
+    tel: "",
+    password: "",
+};
 
 const form = document.getElementById('form')
     form.addEventListener('submit', (e) => {

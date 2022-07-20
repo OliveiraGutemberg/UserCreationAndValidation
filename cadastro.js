@@ -30,12 +30,19 @@ const form = document.getElementById('form')
     let checkoutPassword = false
     let checkoutConfirmPassword = false
 
-    if(nameValue.length < 4) {
+    // Name
+
+    function validatorName(name) {
+        const regExpName = /^[A-z]+\ [A-z]+\ ?([A-z]+)?\ ?([A-z]+)?\ ?([A-z]+)?\ ?([A-z]+)?\ ?([A-z]+)?\ ?([A-z]+)?$/
+        return regExpName.test(name)
+    }
+
+    if(validatorName(nameValue) === false || nameValue.length < 4) {
         const nameDIV = document.getElementById('nameDIV')
         nameDIV.classList.add("error")
         
         const erroName = document.getElementById('erroName')
-        erroName.textContent = 'Insira mais de 3 letras'
+        erroName.textContent = 'Insira nome e sobrenome'
 
     } else {
         const nameDIV = document.getElementById('nameDIV')
@@ -45,12 +52,19 @@ const form = document.getElementById('form')
         checkoutName = true
     }
 
-    if(emailValue === "" || emailValue.length < 6 || emailValue.search("@") == -1 || emailValue.indexOf(".") < 1 || emailValue.indexOf(" ") > 0) {
+    // Email
+
+    function validatorEmail(email) {
+        const regExpEmail = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/
+        return regExpEmail.test(email)
+    }
+    
+    if (validatorEmail(emailValue) === false) {
         const emailDIV = document.getElementById('emailDIV')
         emailDIV.classList.add("error")
         
         const erroEmail = document.getElementById('erroEmail')
-        erroEmail.textContent = 'Email invalido'
+        erroEmail.textContent = 'Email invalido (ex: abc@abc.com)'
         
     } else {
         const emailDIV = document.getElementById('emailDIV')
@@ -59,6 +73,8 @@ const form = document.getElementById('form')
 
         checkoutEmail = true
     }
+
+    // Telephone
 
     if(telephoneValue.length === 11) {
         const telephoneDIV = document.getElementById('telephoneDIV')
@@ -75,6 +91,8 @@ const form = document.getElementById('form')
 
     }
 
+    // Password
+
     if(passwordValue.length > 5) {
         const passwordDIV = document.getElementById('passwordDIV')
         passwordDIV.classList.add("sucess")
@@ -89,6 +107,8 @@ const form = document.getElementById('form')
         erroPassword.textContent = 'Insira mais de 5 caracteres'
     }
 
+    // Confirm Password
+
     if(confirmPasswordValue === passwordValue && confirmPasswordValue !== "") {
         const confirmPasswordDIV = document.getElementById('confirmPasswordDIV')
         confirmPasswordDIV.classList.add("sucess")
@@ -102,6 +122,8 @@ const form = document.getElementById('form')
         const erroConfirmPassword = document.getElementById('erroConfirmPassword')
         erroConfirmPassword.textContent = 'Senha invalida'
     }
+
+    // Verification
 
     if(checkoutName && checkoutEmail && checkoutTelefone && checkoutPassword && checkoutConfirmPassword) {
         
