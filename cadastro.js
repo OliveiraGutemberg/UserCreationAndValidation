@@ -33,7 +33,7 @@ const form = document.getElementById('form')
     // Name
 
     function validatorName(name) {
-        const regExpName = /^[A-z]+\ [A-z]+\ ?([A-z]+)?\ ?([A-z]+)?\ ?([A-z]+)?\ ?([A-z]+)?\ ?([A-z]+)?\ ?([A-z]+)?$/
+        const regExpName = /^[A-z]{3,}\ [A-z]{2,}\ ?([A-z]{2,})?\ ?([A-z]{2,})?\ ?([A-z]{2,})?\ ?([A-z]{2,})?\ ?([A-z]{2,})?\ ?([A-z]{2,})?$/
         return regExpName.test(name)
     }
 
